@@ -9,6 +9,7 @@ import Skills from './Components/Skills'
 import Projects from './Components/Projects'
 import Contact from './Components/Contact'
 import Footer from './Components/Footer'
+import Education from './Components/Education'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <div className="portfolio-container">
         <Navigation />
         <Hero />
+        <Education/>
         <About />
         <Skills />
         <Projects />
