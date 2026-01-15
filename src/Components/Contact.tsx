@@ -18,10 +18,10 @@ const Contact: React.FC = () => {
               <MessageCircle size={24} />
               0760598962
             </a>
-            <a href="https://github.com/KaveeshaGayashan-09" target="_blank" rel="noopener noreferrer" className="contact-link contact-link-secondary">
+            {/* <a href="https://github.com/KaveeshaGayashan-09" target="_blank" rel="noopener noreferrer" className="contact-link contact-link-secondary">
               <Github size={24} />
               GitHub Profile
-            </a>
+            </a> */}
           </div>
         </div>
       </div>

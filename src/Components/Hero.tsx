@@ -14,10 +14,10 @@ const Hero: React.FC = () => {
             <Mail size={20} />
             Get in Touch
           </a>
-          <a href="https://github.com/KaveeshaGayashan-09" target="_blank" rel="noopener noreferrer" className="btn-secondary">
+          {/* <a href="https://github.com/KaveeshaGayashan-09" target="_blank" rel="noopener noreferrer" className="btn-secondary">
             <Github size={20} />
             View GitHub
-          </a>
+          </a> */}
         </div>
       </div>
     </section>
