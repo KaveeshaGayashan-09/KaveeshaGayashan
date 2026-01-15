@@ -1,9 +1,11 @@
 import React from 'react';
+import image from '../assets/image.jpeg';
 import { Mail } from 'lucide-react';
 const Hero: React.FC = () => {
   return (
     <section id="home" className="hero-section">
       <div className="hero-content">
+        <img src={image} alt="" className="hero-img"/>
         <h1 className="hero-title">Kaveesha Gayashan</h1>
         <p className="hero-subtitle">Information Systems Engineering Student</p>
         <p className="hero-description">

@@ -126,10 +126,13 @@
   .nav-content {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 1.2rem 2rem;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content:space-between;
+    align-items:center;
   }
 
   .logo {
@@ -139,6 +142,7 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    margin-left:0;
   }
 
   .nav-links {
@@ -214,6 +218,24 @@
     margin-bottom: 1rem;
     line-height: 1.2;
     text-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+
+    opacity: 0;
+    transform: translateX(70px); /* Start 50px to the left */
+    animation: slideRight 0.9s ease-out forwards;
+  }
+
+  .hero-img{
+   width: 250px;
+  height: 300px;
+  object-fit:cover;
+  border-radius: 50%;
+  transition: filter 0.3s ease;
+
+  }
+
+  .hero-img:hover {
+    transform: scale(1.1);
+    transition: transform 0.5s ease;
   }
 
   .hero-subtitle {
@@ -221,13 +243,28 @@
     font-weight: 300;
     margin-bottom: 1.5rem;
     opacity: 0.95;
+
+    opacity: 0;
+    transform: translateX(-70px); /* Start 50px to the left */
+    animation: slideRight 0.8s ease-out forwards;
   }
+  /* Keyframe to slide right */
+  @keyframes slideRight {
+  to {
+    opacity: 1;
+    transform: translateX(0); /* End at natural position */
+  }
+}
 
   .hero-description {
     font-size: 1.1rem;
     line-height: 1.8;
     margin-bottom: 2.5rem;
     opacity: 0.9;
+
+    opacity: 0;
+    transform: translateY(70px); /* Start 50px to the top */
+    animation: slideRight 0.8s ease-out forwards;
   }
 
   .hero-buttons {
@@ -373,6 +410,9 @@
   }
 
   .project-card {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 350px;
     background: white;
     border-radius: 20px;
     overflow: hidden;
@@ -520,6 +560,15 @@
     .nav-links {
       display: none;
     }
+
+    .hero-img{
+   width: 200px;
+  height: 250px;
+  object-fit:cover;
+  border-radius: 50%;
+  transition: filter 0.3s ease;
+
+  }
 
     .mobile-menu-btn {
       display: block;

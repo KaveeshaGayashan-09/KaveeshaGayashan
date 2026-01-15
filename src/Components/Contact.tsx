@@ -1,5 +1,5 @@
 import React from 'react';
-import {  Mail, MessageCircle, Github } from 'lucide-react';
+import {  Mail, MessageCircle } from 'lucide-react';
 const Contact: React.FC = () => {
   return (
     <section id="contact" className="section section-alt">

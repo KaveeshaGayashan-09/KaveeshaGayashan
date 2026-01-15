@@ -10,14 +10,14 @@ const Projects: React.FC = () => {
       github: '#',
       demo: "https://akashpathum.netlify.app"
     },
-    {
-      title: 'Project Two',
-      description: 'A brief description of your second project. Highlight the key features and your role in development. Mention any challenges overcome.',
-      tech: ['Java', 'OOP'],
-      github: '#',
-      demo: "https://akashpathum.netlify.app"
-    },
-   
+    // {
+    //   title: 'Project Two',
+    //   description: 'A brief description of your second project. Highlight the key features and your role in development. Mention any challenges overcome.',
+    //   tech: ['Java', 'OOP'],
+    //   github: '#',
+    //   demo: "https://akashpathum.netlify.app"
+    // },
+    
   ];
 
   return (
