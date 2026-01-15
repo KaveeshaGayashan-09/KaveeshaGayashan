@@ -1,11 +1,11 @@
 import { Github, ExternalLink } from 'lucide-react';
 import React from 'react';
 
-const Projects = () => {
+const Projects: React.FC = () => {
   const projects = [
     {
       title: 'Project One',
-      description: 'A brief description of your first project. Explain what it does and what technologies you used to build it. Highlight the problems it solves.',
+      description: 'This is a Simple portfolio Website that I created using React Framework ',
       tech: ['React', 'JavaScript', 'CSS'],
       github: '#',
       demo: "https://akashpathum.netlify.app"
@@ -17,13 +17,7 @@ const Projects = () => {
       github: '#',
       demo: "https://akashpathum.netlify.app"
     },
-    {
-      title: 'Project Three',
-      description: 'A brief description of your third project. Discuss what you learned and the impact of the project. Share your development process.',
-      tech: ['JavaScript', 'HTML', 'CSS'],
-      github: '#',
-      demo: "https://akashpathum.netlify.app"
-    }
+   
   ];
 
   return (

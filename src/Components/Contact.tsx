@@ -14,9 +14,9 @@ const Contact: React.FC = () => {
               <Mail size={24} />
               kavesha969@gmail.com
             </a>
-            <a href="https://wa.me/94720000000" target="_blank" rel="noopener noreferrer" className="contact-link contact-link-whatsapp">
+            <a href="https://wa.me/0760598962" target="_blank" rel="noopener noreferrer" className="contact-link contact-link-whatsapp">
               <MessageCircle size={24} />
-              072XXXXXXX
+              0760598962
             </a>
             <a href="https://github.com/KaveeshaGayashan-09" target="_blank" rel="noopener noreferrer" className="contact-link contact-link-secondary">
               <Github size={24} />

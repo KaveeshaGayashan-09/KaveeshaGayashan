@@ -2,7 +2,7 @@
 import { Code, Layers } from 'lucide-react';
 import React from 'react';
 
-const Skills = () => {
+const Skills: React.FC = () => {
   const skills = [
     { name: 'Java', icon: Code },
     { name: 'Java OOP', icon: Layers },

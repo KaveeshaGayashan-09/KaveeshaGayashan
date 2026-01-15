@@ -1,6 +1,6 @@
 import React from 'react';
 import { Mail, Github } from 'lucide-react';
-const Hero = () => {
+const Hero: React.FC = () => {
   return (
     <section id="home" className="hero-section">
       <div className="hero-content">
