@@ -18,7 +18,7 @@ const educationData: Qualification[] = [
     title: 'G.C.E. Advanced Level (A/L)',
     institution: 'Vishvoda National Collage',
     year: '2024',
-    details: ['Japanese: A', 'Economics: B', 'ICT: C'],
+    details: ['Japanese: B', 'Economics: B', 'ICT: B'],
     status: 'Arts Stream'
   },
   {
