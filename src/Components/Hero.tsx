@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Github } from 'lucide-react';
+import { Mail } from 'lucide-react';
 const Hero: React.FC = () => {
   return (
     <section id="home" className="hero-section">
