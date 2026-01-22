@@ -13,17 +13,16 @@ const Navigation: React.FC = () => {
   return (
     <nav className="nav-bar">
       <div className="nav-content">
-        <div className="logo">KG</div>
+        <div className="logo">KAVEESHA GAYASHAN</div>
         
         <ul className="nav-links">
           <li><button className="nav-link" onClick={() => scrollToSection('home')}>Home</button></li>
           <li><button className="nav-link" onClick={() => scrollToSection('education')}>Education</button></li>
           <li><button className="nav-link" onClick={() => scrollToSection('about')}>About</button></li>
           <li><button className="nav-link" onClick={() => scrollToSection('skills')}>Skills</button></li>
-          <li><button className="nav-link" onClick={() => scrollToSection('projects')}>Projects</button></li>
-          <li><button className="nav-link" onClick={() => scrollToSection('contact')}>Contact</button></li>
-          
+          <li><button className="nav-link" onClick={() => scrollToSection('projects')}>Projects</button></li> 
         </ul>
+        <button className="contact-btn" onClick={() => scrollToSection('contact')}>Contact</button>
 
         <button className="mobile-menu-btn" onClick={() => setIsMenuOpen(!isMenuOpen)}>
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
