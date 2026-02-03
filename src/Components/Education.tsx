@@ -25,9 +25,10 @@ const educationData: Qualification[] = [
     id: 2,
     type:'Certification',
     title: 'Other Certifications',
-    institution: 'ESOFT METRO CAMPUS',
+    institution :'',
     year: '2023',
-    details: ['Assured Diploma in IT', 'Diploma In English'],
+    details: ['Assured Diploma in IT', 'Diploma In English', 'Web Design For Beginers' , 'Japanese N5 Qualified' ,'Cyber Security and Ethical Hacking Beginer'],
+    
   },
 //    {
 //     id: 3,
@@ -43,7 +44,7 @@ const educationData: Qualification[] = [
     title: 'G.C.E. Ordinary Level (O/L)',
     institution: 'S.W.R.D Bandaranaika Collage Kurunegala',
     year: '2021/2022',
-    details: ['8/9 As including Mathematics and English'],
+    details: ['8/9 passes including Mathematics and English'],
   }
 ];
 

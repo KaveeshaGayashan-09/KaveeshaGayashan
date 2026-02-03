@@ -225,11 +225,13 @@
   }
 
   .hero-img{
-   width: 250px;
+  width: 250px;
   height: 300px;
   object-fit:cover;
   border-radius: 50%;
   transition: filter 0.3s ease;
+      
+    transition: filter 0.3s ease;
 
   }
 
@@ -376,6 +378,7 @@
     transition: all 0.3s ease;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
     border: 1px solid #e2e8f0;
+    max-width: 200px;
   }
 
   .skill-card:hover {
@@ -563,6 +566,19 @@
     .contact-btn{
       display: none;
     }
+
+    .skill-card{
+      width: 200px;
+    }
+
+    .skills-grid{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+     
+    }
+    
 
     .hero-img{
    width: 200px;
