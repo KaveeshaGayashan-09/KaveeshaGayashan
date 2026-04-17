@@ -11,4 +11,7 @@ export default defineConfig({
     }),
   ],
   base: '/KaveeshaGayashan',
+  server: {
+    open: true,
+  },
 })
