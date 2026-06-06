@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import { Mail, Github } from "lucide-react";
 import image from "../assets/image.jpeg";
 import { PERSONAL } from "../data";
@@ -40,9 +40,9 @@ function useTypewriter(words: string[], speed = 90, pause = 1800) {
   return text;
 }
 
-const fadeUp = {
+const fadeUp: Variants = {
   hidden: { opacity: 0, y: 40 },
-  visible: (i = 0) => ({
+  visible: (i: number = 0) => ({
     opacity: 1,
     y: 0,
     transition: { delay: i * 0.12, duration: 0.7, ease: [0.25, 1, 0.5, 1] },

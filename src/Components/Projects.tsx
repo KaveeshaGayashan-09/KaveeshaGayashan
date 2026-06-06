@@ -1,11 +1,11 @@
 import React, { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, type Variants } from "framer-motion";
 import { Github, ExternalLink } from "lucide-react";
 import { PROJECTS } from "../data";
 
-const fadeUp = {
+const fadeUp: Variants = {
   hidden: { opacity: 0, y: 35 },
-  visible: (i = 0) => ({
+  visible: (i: number = 0) => ({
     opacity: 1,
     y: 0,
     transition: { delay: i * 0.12, duration: 0.65, ease: [0.25, 1, 0.5, 1] },
