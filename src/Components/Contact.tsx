@@ -1,27 +1,97 @@
-import React from 'react';
-import {  Mail, MessageCircle } from 'lucide-react';
+import React, { useRef } from "react";
+import { motion, useInView } from "framer-motion";
+import { Mail, MessageCircle, Github } from "lucide-react";
+import { PERSONAL } from "../data";
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 35 },
+  visible: (i = 0) => ({
+    opacity: 1,
+    y: 0,
+    transition: { delay: i * 0.12, duration: 0.65, ease: [0.25, 1, 0.5, 1] },
+  }),
+};
+
 const Contact: React.FC = () => {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true, margin: "-80px" });
+
+  const contacts = [
+    {
+      icon: <Mail size={22} />,
+      iconClass: "email-icon",
+      label: "Email",
+      value: PERSONAL.email,
+      href: `mailto:${PERSONAL.email}`,
+    },
+    {
+      icon: <MessageCircle size={22} />,
+      iconClass: "whatsapp-icon",
+      label: "WhatsApp",
+      value: PERSONAL.phone,
+      href: PERSONAL.whatsapp,
+    },
+    {
+      icon: <Github size={22} />,
+      iconClass: "github-icon",
+      label: "GitHub",
+      value: "KaveeshaGayashan-09",
+      href: PERSONAL.github,
+    },
+  ];
+
   return (
-    <section id="contact" className="section section-alt">
+    <section id="contact" className="section section-alt" ref={ref}>
       <div className="section-content">
-        <h2 className="section-title">Get In Touch</h2>
-        <div className="contact-content">
-          <p className="contact-description">
-            I'm always open to discussing new opportunities, collaborating on projects, or just connecting with fellow developers and tech enthusiasts. Let's create something amazing together!
-          </p>
-          <div className="contact-links">
-            <a href="mailto:kavesha969@gmail.com" className="contact-link">
-              <Mail size={24} />
-              kavesha969@gmail.com
-            </a>
-            <a href="https://wa.me/+94760598962" target="_blank" rel="noopener noreferrer" className="contact-link contact-link-whatsapp">
-              <MessageCircle size={24} />
-              0760598962
-            </a>
-            {/* <a href="https://github.com/KaveeshaGayashan-09" target="_blank" rel="noopener noreferrer" className="contact-link contact-link-secondary">
-              <Github size={24} />
-              GitHub Profile
-            </a> */}
+        <motion.span
+          className="section-label"
+          initial="hidden"
+          animate={inView ? "visible" : "hidden"}
+          variants={fadeUp}
+          custom={0}
+        >
+          Let's Talk
+        </motion.span>
+        <motion.h2
+          className="section-title"
+          initial="hidden"
+          animate={inView ? "visible" : "hidden"}
+          variants={fadeUp}
+          custom={1}
+        >
+          Get In Touch
+        </motion.h2>
+        <motion.p
+          className="section-subtitle"
+          initial="hidden"
+          animate={inView ? "visible" : "hidden"}
+          variants={fadeUp}
+          custom={2}
+        >
+          I'm always open to new opportunities, collaborations, or simply a conversation.
+        </motion.p>
+
+        <div className="contact-wrapper">
+          <div className="contact-cards">
+            {contacts.map((c, i) => (
+              <motion.a
+                key={i}
+                href={c.href}
+                target={c.href.startsWith("http") ? "_blank" : undefined}
+                rel="noopener noreferrer"
+                className="contact-card"
+                initial="hidden"
+                animate={inView ? "visible" : "hidden"}
+                variants={fadeUp}
+                custom={3 + i * 0.4}
+              >
+                <div className={`contact-card-icon ${c.iconClass}`}>{c.icon}</div>
+                <div className="contact-card-text">
+                  <div className="contact-card-label">{c.label}</div>
+                  <div className="contact-card-value">{c.value}</div>
+                </div>
+              </motion.a>
+            ))}
           </div>
         </div>
       </div>

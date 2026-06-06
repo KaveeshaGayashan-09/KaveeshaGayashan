@@ -1,75 +1,86 @@
-import React from 'react';
+import React, { useRef } from "react";
+import { motion, useInView } from "framer-motion";
+import { EDUCATION } from "../data";
 
-
-interface Qualification {
-  id: number;
-  type: 'Exam' | 'Certification';
-  title: string;
-  institution: string;
-  year: string;
-  details: string[]; // For results or specific modules
-  status?: string; // e.g., "Pass", "Credit", "Distinction"
-}
-
-const educationData: Qualification[] = [
-  {
-    id: 1,
-    type: 'Exam',
-    title: 'G.C.E. Advanced Level (A/L)',
-    institution: 'Vishvoda National Collage',
-    year: '2024',
-    details: ['Japanese: B', 'Economics: B', 'ICT: B'],
-    status: 'Arts Stream'
-  },
-  {
-    id: 2,
-    type:'Certification',
-    title: 'Other Certifications',
-    institution :'',
-    year: '2023',
-    details: ['Assured Diploma in IT', 'Diploma In English', 'Web Design For Beginers' , 'Japanese N5 Qualified' ,'Cyber Security and Ethical Hacking Beginer'],
-    
-  },
-//    {
-//     id: 3,
-//     type:'Certification',
-//     title: 'Other Certifications',
-//     institution: 'ESOFT METRO CAMPUS',
-//     year: '2023',
-//     details: ['Assured Diploma in IT', 'Diploma In English'],
-//   },
-  {
-    id: 4,
-    type: 'Exam',
-    title: 'G.C.E. Ordinary Level (O/L)',
-    institution: 'S.W.R.D Bandaranaika Collage Kurunegala',
-    year: '2021/2022',
-    details: ['8/9 passes including Mathematics and English'],
-  }
-];
+const fadeUp = {
+  hidden: { opacity: 0, y: 35 },
+  visible: (i = 0) => ({
+    opacity: 1,
+    y: 0,
+    transition: { delay: i * 0.12, duration: 0.65, ease: [0.25, 1, 0.5, 1] },
+  }),
+};
 
 const Education: React.FC = () => {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true, margin: "-80px" });
+
   return (
-    <section className="education-section" id="education">
-      <h2 className="section-title">Educational Background</h2>
-      <div className="timeline">
-        {educationData.map((item) => (
-          <div key={item.id} className="timeline-item">
-            <div className="timeline-dot"></div>
-            <div className="education-card">
-              <span className={`badge ${item.type.toLowerCase()}`}>{item.type}</span>
-              <span className="year">{item.year}</span>
-              <h3 className="degree-title">{item.title}</h3>
-              <p className="institution">{item.institution}</p>
-              {item.status && <p className="stream">{item.status}</p>}
-              <ul className="details-list">
-                {item.details.map((detail, index) => (
-                  <li key={index}>{detail}</li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        ))}
+    <section className="education-section" id="education" ref={ref}>
+      <div className="section-content">
+        <motion.span
+          className="section-label"
+          initial="hidden"
+          animate={inView ? "visible" : "hidden"}
+          variants={fadeUp}
+          custom={0}
+        >
+          My Journey
+        </motion.span>
+        <motion.h2
+          className="section-title"
+          initial="hidden"
+          animate={inView ? "visible" : "hidden"}
+          variants={fadeUp}
+          custom={1}
+        >
+          Educational Background
+        </motion.h2>
+        <motion.p
+          className="section-subtitle"
+          initial="hidden"
+          animate={inView ? "visible" : "hidden"}
+          variants={fadeUp}
+          custom={2}
+        >
+          Academic milestones and professional certifications.
+        </motion.p>
+
+        <div className="timeline">
+          {EDUCATION.map((item, i) => (
+            <motion.div
+              key={item.id}
+              className="timeline-item"
+              initial="hidden"
+              animate={inView ? "visible" : "hidden"}
+              variants={fadeUp}
+              custom={3 + i * 0.6}
+            >
+              <div className="timeline-dot-wrapper">
+                <div className="timeline-dot" />
+              </div>
+
+              <div className="education-card">
+                <div className="edu-meta">
+                  <span className={`badge ${item.type.toLowerCase()}`}>{item.type}</span>
+                  <span className="year">{item.year}</span>
+                </div>
+
+                <h3 className="degree-title">{item.title}</h3>
+                {item.institution && (
+                  <p className="institution">{item.institution}</p>
+                )}
+                {item.status && <p className="stream">{item.status}</p>}
+
+                <ul className="details-list">
+                  {item.details.map((detail, idx) => (
+                    <li key={idx}>{detail}</li>
+                  ))}
+                </ul>
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );
