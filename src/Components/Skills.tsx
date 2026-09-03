@@ -1,8 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { motion, useInView, type Variants } from "framer-motion";
-import { SKILLS } from "../data";
-
-const CATEGORIES = ["All", ...Array.from(new Set(SKILLS.map((s) => s.category)))];
+import portfolioData from "../data.json";
 
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 30 },
@@ -44,8 +42,10 @@ const Skills: React.FC = () => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
+  const CATEGORIES = ["All", ...Array.from(new Set(portfolioData.skills.map((s: any) => s.category)))];
+
   const filtered =
-    active === "All" ? SKILLS : SKILLS.filter((s) => s.category === active);
+    active === "All" ? portfolioData.skills : portfolioData.skills.filter((s: any) => s.category === active);
 
   return (
     <section id="skills" className="section section-alt" ref={ref}>
@@ -88,11 +88,11 @@ const Skills: React.FC = () => {
         >
           {CATEGORIES.map((cat) => (
             <button
-              key={cat}
+              key={cat as string}
               className={`skill-filter-btn${active === cat ? " active" : ""}`}
-              onClick={() => setActive(cat)}
+              onClick={() => setActive(cat as string)}
             >
-              {cat}
+              {cat as string}
             </button>
           ))}
         </motion.div>
@@ -101,9 +101,9 @@ const Skills: React.FC = () => {
         <div className="skills-grid">
           {filtered.map((skill, i) => (
             <motion.div
-              key={skill.name}
+              key={skill.id || skill.name}
               className="skill-card"
-              style={{ "--skill-color": skill.color } as React.CSSProperties}
+              style={{ "--skill-color": "#4f46e5" } as React.CSSProperties}
               initial="hidden"
               animate={inView ? "visible" : "hidden"}
               variants={fadeUp}
@@ -111,9 +111,9 @@ const Skills: React.FC = () => {
             >
               <div className="skill-header">
                 <span className="skill-name">{skill.name}</span>
-                <span className="skill-level-label">{skill.level}%</span>
+                <span className="skill-level-label">{skill.proficiency}%</span>
               </div>
-              <SkillBar level={skill.level} color={skill.color} inView={inView} />
+              <SkillBar level={skill.proficiency} color="#4f46e5" inView={inView} />
               <span className="skill-category-tag">{skill.category}</span>
             </motion.div>
           ))}

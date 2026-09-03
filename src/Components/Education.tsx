@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { motion, useInView, type Variants } from "framer-motion";
-import { EDUCATION } from "../data";
+import portfolioData from "../data.json";
 
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 35 },
@@ -47,7 +47,7 @@ const Education: React.FC = () => {
         </motion.p>
 
         <div className="timeline">
-          {EDUCATION.map((item, i) => (
+          {portfolioData.education.map((item: any, i: number) => (
             <motion.div
               key={item.id}
               className="timeline-item"
@@ -62,20 +62,17 @@ const Education: React.FC = () => {
 
               <div className="education-card">
                 <div className="edu-meta">
-                  <span className={`badge ${item.type.toLowerCase()}`}>{item.type}</span>
-                  <span className="year">{item.year}</span>
+                  <span className={`badge education`}>Education</span>
+                  <span className="year">{item.startDate} - {item.endDate}</span>
                 </div>
 
-                <h3 className="degree-title">{item.title}</h3>
+                <h3 className="degree-title">{item.degree}</h3>
                 {item.institution && (
                   <p className="institution">{item.institution}</p>
                 )}
-                {item.status && <p className="stream">{item.status}</p>}
 
                 <ul className="details-list">
-                  {item.details.map((detail, idx) => (
-                    <li key={idx}>{detail}</li>
-                  ))}
+                  <li>{item.description}</li>
                 </ul>
               </div>
             </motion.div>

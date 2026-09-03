@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { motion, useInView, type Variants } from "framer-motion";
 import { Github, ExternalLink } from "lucide-react";
-import { PROJECTS } from "../data";
+import portfolioData from "../data.json";
 
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 35 },
@@ -48,7 +48,7 @@ const Projects: React.FC = () => {
         </motion.p>
 
         <div className="projects-grid">
-          {PROJECTS.map((project, i) => (
+          {portfolioData.projects.map((project: any, i: number) => (
             <motion.div
               key={i}
               className="project-card"
@@ -62,7 +62,7 @@ const Projects: React.FC = () => {
               <p className="project-description">{project.description}</p>
 
               <div className="project-tech">
-                {project.tech.map((tech, j) => (
+                {project.tech.map((tech: string, j: number) => (
                   <span key={j} className="tech-tag">{tech}</span>
                 ))}
               </div>
@@ -94,7 +94,7 @@ const Projects: React.FC = () => {
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
           variants={fadeUp}
-          custom={3 + PROJECTS.length * 0.5 + 0.5}
+          custom={3 + portfolioData.projects.length * 0.5 + 0.5}
         >
           🚀 More exciting projects coming soon as I continue my learning journey!
         </motion.p>

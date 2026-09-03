@@ -1,0 +1,176 @@
+{
+  "skills": [
+    {
+      "id": 1,
+      "name": "Java",
+      "proficiency": 80,
+      "category": "Backend",
+      "color": "#f89820"
+    },
+    {
+      "id": 2,
+      "name": "Java OOP",
+      "proficiency": 78,
+      "category": "Backend",
+      "color": "#f89820"
+    },
+    {
+      "id": 3,
+      "name": "Spring Boot",
+      "proficiency": 65,
+      "category": "Backend",
+      "color": "#6db33f"
+    },
+    {
+      "id": 4,
+      "name": "JavaScript",
+      "proficiency": 75,
+      "category": "Frontend",
+      "color": "#f7df1e"
+    },
+    {
+      "id": 5,
+      "name": "React",
+      "proficiency": 72,
+      "category": "Frontend",
+      "color": "#61dafb"
+    },
+    {
+      "id": 6,
+      "name": "HTML & CSS",
+      "proficiency": 85,
+      "category": "Frontend",
+      "color": "#e34f26"
+    },
+    {
+      "id": 7,
+      "name": "MySQL",
+      "proficiency": 68,
+      "category": "Database",
+      "color": "#4479a1"
+    },
+    {
+      "id": 8,
+      "name": "Git & GitHub",
+      "proficiency": 70,
+      "category": "Tools",
+      "color": "#f05032"
+    },
+    {
+      "id": 9,
+      "name": "Docker / Jenkins (Learning)",
+      "category": "DevOps",
+      "proficiency": 70,
+      "color": "#4f46e5"
+    },
+    {
+      "id": 10,
+      "name": "AWS ",
+      "category": "Cloud",
+      "proficiency": 80,
+      "color": "#4f46e5"
+    }
+  ],
+  "education": [
+    {
+      "id": 1,
+      "institution": "SLIIT – Sri Lanka Institute of Information Technology",
+      "degree": "BSc (Hons) in Software Engineering",
+      "startDate": "2024",
+      "endDate": "Present",
+      "description": "2nd Year Undergraduate. Specializing in full-stack development & systems design"
+    },
+    {
+      "id": 2,
+      "institution": "Vishvoda National College",
+      "degree": "G.C.E. Advanced Level (A/L)",
+      "startDate": "2024",
+      "endDate": "2024",
+      "description": "Japanese: B, Economics: B, ICT: B. Arts Stream"
+    },
+    {
+      "id": 3,
+      "institution": "S.W.R.D Bandaranaike College, Kurunegala",
+      "degree": "G.C.E. Ordinary Level (O/L)",
+      "startDate": "2021",
+      "endDate": "2022",
+      "description": "8 out of 9 passes including Mathematics & English"
+    },
+    {
+      "id": 4,
+      "institution": "Various Institutions",
+      "degree": "Professional Certifications",
+      "startDate": "2023",
+      "endDate": "2023",
+      "description": "Assured Diploma in IT, Diploma in English, Web Design for Beginners, Japanese Language – N5 Qualified, Cyber Security & Ethical Hacking (Beginner)"
+    }
+  ],
+  "personal": {
+    "name": "Kaveesha Gayashan",
+    "title": "Software Engineering Undergraduate",
+    "subtitle": [
+      "Full-Stack Developer",
+      "Java Enthusiast",
+      "React Developer",
+      "Problem Solver"
+    ],
+    "description": "Undergraduate at SLIIT specializing in Software Engineering, passionate about building innovative software solutions and exploring the endless possibilities of technology.",
+    "email": "kavesha969@gmail.com",
+    "phone": "0760598962",
+    "whatsapp": "https://wa.me/+94760598962",
+    "github": "https://github.com/KaveeshaGayashan-09",
+    "linkedin": ""
+  },
+  "about": [
+    "I'm currently a second-year undergraduate student at SLIIT (Sri Lanka Institute of Information Technology), specializing in Software Engineering. My journey in technology is driven by curiosity and a passion for creating meaningful digital solutions.",
+    "As I progress through my academic career, I'm building a strong foundation in software development, focusing on both object-oriented programming and modern web technologies. I believe in learning by doing, and I'm constantly working on projects that challenge me to grow as a developer.",
+    "I'm actively seeking opportunities to gain hands-on experience through internships and collaborative projects, where I can contribute to innovative solutions while expanding my technical skill set. My goal is to become a well-rounded software engineer who can bridge the gap between business needs and technical implementation."
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "title": "Personal Portfolio Website",
+      "description": "A modern, responsive portfolio website built with React, featuring smooth animations and a clean dark-mode design to showcase my skills and projects.",
+      "tech": [
+        "React",
+        "JavaScript",
+        "CSS"
+      ],
+      "github": "#",
+      "demo": "https://akashpathum.netlify.app",
+      "emoji": "🌐"
+    },
+    {
+      "id": 2,
+      "title": "Home Tutor Management System",
+      "description": "A full-stack web application with CRUD operations, JWT Authentication, and a dedicated Admin Panel to manage tutors, students, and sessions efficiently.",
+      "tech": [
+        "Java",
+        "Spring Boot",
+        "MySQL",
+        "React",
+        "JWT"
+      ],
+      "github": "#",
+      "demo": "https://hometutor-mu.vercel.app",
+      "emoji": "📚"
+    },
+    {
+      "id": 3,
+      "title": "Client Management System",
+      "description": "A full-stack web application with CRUD operations, JWT Authentication, and a dedicated Admin Panel to manage Clients ,  Including OAuth and also Password Reset Using Spring Security.",
+      "tech": [
+        "Java",
+        "Spring Boot",
+        "MySQL",
+        "React",
+        "JWT",
+        "Spring Security",
+        "OAuth 2.0"
+      ],
+      "github": "#",
+      "demo": "https://client-management-k8u9.vercel.app",
+      "emoji": "💼"
+    }
+  ]
+}

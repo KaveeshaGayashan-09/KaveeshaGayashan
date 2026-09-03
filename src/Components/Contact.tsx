@@ -1,7 +1,9 @@
 import React, { useRef } from "react";
 import { motion, useInView, type Variants } from "framer-motion";
 import { Mail, MessageCircle, Github } from "lucide-react";
-import { PERSONAL } from "../data";
+import portfolioData from "../data.json";
+
+const personal = portfolioData.personal;
 
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 35 },
@@ -21,22 +23,22 @@ const Contact: React.FC = () => {
       icon: <Mail size={22} />,
       iconClass: "email-icon",
       label: "Email",
-      value: PERSONAL.email,
-      href: `mailto:${PERSONAL.email}`,
+      value: personal.email,
+      href: `mailto:${personal.email}`,
     },
     {
       icon: <MessageCircle size={22} />,
       iconClass: "whatsapp-icon",
       label: "WhatsApp",
-      value: PERSONAL.phone,
-      href: PERSONAL.whatsapp,
+      value: personal.phone,
+      href: personal.whatsapp,
     },
     {
       icon: <Github size={22} />,
       iconClass: "github-icon",
       label: "GitHub",
       value: "KaveeshaGayashan-09",
-      href: PERSONAL.github,
+      href: personal.github,
     },
   ];
 

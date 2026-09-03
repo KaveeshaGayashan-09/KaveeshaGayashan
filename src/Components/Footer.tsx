@@ -1,5 +1,7 @@
 import React from "react";
-import { PERSONAL } from "../data";
+import portfolioData from "../data.json";
+
+const personal = portfolioData.personal;
 
 const Footer: React.FC = () => {
   const year = new Date().getFullYear();
@@ -9,7 +11,7 @@ const Footer: React.FC = () => {
       <div className="footer-content">
         <div className="footer-logo">KG</div>
         <p className="footer-text">
-          © {year} {PERSONAL.name} · Built with React & ❤️
+          © {year} {personal.name} · Built with React & ❤️
         </p>
       </div>
     </footer>

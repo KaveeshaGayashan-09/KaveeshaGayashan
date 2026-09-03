@@ -1,7 +1,7 @@
 import React from "react";
 import { motion, useInView, type Variants } from "framer-motion";
 import { useRef } from "react";
-import { ABOUT_PARAGRAPHS } from "../data";
+import portfolioData from "../data.json";
 
 const highlights = [
   {
@@ -79,7 +79,7 @@ const About: React.FC = () => {
             variants={fadeUp}
             custom={3}
           >
-            {ABOUT_PARAGRAPHS.map((para, i) => (
+            {portfolioData.about.map((para, i) => (
               <p key={i}>{para}</p>
             ))}
           </motion.div>

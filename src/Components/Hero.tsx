@@ -2,7 +2,9 @@ import React, { useState, useEffect } from "react";
 import { motion, type Variants } from "framer-motion";
 import { Mail, Github } from "lucide-react";
 import image from "../assets/image.jpeg";
-import { PERSONAL } from "../data";
+import portfolioData from "../data.json";
+
+const { personal } = portfolioData;
 
 // Typewriter hook
 function useTypewriter(words: string[], speed = 90, pause = 1800) {
@@ -50,7 +52,7 @@ const fadeUp: Variants = {
 };
 
 const Hero: React.FC = () => {
-  const typeText = useTypewriter(PERSONAL.subtitle);
+  const typeText = useTypewriter(personal.subtitle);
 
   return (
     <section id="home" className="hero-section">
@@ -75,7 +77,7 @@ const Hero: React.FC = () => {
             animate="visible"
             custom={1}
           >
-            {PERSONAL.name}
+            {personal.name}
           </motion.h1>
 
           <motion.p
@@ -96,7 +98,7 @@ const Hero: React.FC = () => {
             animate="visible"
             custom={3}
           >
-            {PERSONAL.description}
+            {personal.description}
           </motion.p>
 
           <motion.div
@@ -106,11 +108,11 @@ const Hero: React.FC = () => {
             animate="visible"
             custom={4}
           >
-            <a href={`mailto:${PERSONAL.email}`} className="btn-primary">
+            <a href={`mailto:${personal.email}`} className="btn-primary">
               <Mail size={18} /> Get in Touch
             </a>
             <a
-              href={PERSONAL.github}
+              href={personal.github}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-outline"
@@ -153,7 +155,7 @@ const Hero: React.FC = () => {
           <div className="hero-floating-badge badge-java">☕ Java</div>
 
           <div className="hero-image-ring">
-            <img src={image} alt={PERSONAL.name} className="hero-img" />
+            <img src={image} alt={personal.name} className="hero-img" />
           </div>
         </motion.div>
       </div>
