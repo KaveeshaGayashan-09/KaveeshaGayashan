@@ -119,7 +119,7 @@
     "phone": "0760598962",
     "whatsapp": "https://wa.me/+94760598962",
     "github": "https://github.com/KaveeshaGayashan-09",
-    "linkedin": ""
+    "linkedin": "https://www.linkedin.com/in/kaveesha-gayashan-3aa741348/"
   },
   "about": [
     "I'm currently a second-year undergraduate student at SLIIT (Sri Lanka Institute of Information Technology), specializing in Software Engineering. My journey in technology is driven by curiosity and a passion for creating meaningful digital solutions.",
@@ -171,6 +171,21 @@
       "github": "#",
       "demo": "https://client-management-k8u9.vercel.app",
       "emoji": "💼"
+    },
+    {
+      "id": 4,
+      "title": "Web Based Rental Management System",
+      "description": "Academic project that is ongoing including SpringBoot, JWT authentication, Docker, MicrosoftSQL which will precisely implement the major functions of a real world web site of a vehicle renting",
+      "tech": [
+        "SpringBoot",
+        "Docker",
+        "JWT",
+        "React",
+        "Redis"
+      ],
+      "github": "https://github.com/IT25100066/RentEaseLanka.git",
+      "demo": "https://kaveeshagayashan-09.github.io/KaveeshaGayashan/",
+      "emoji": "🚗"
     }
   ]
 }
